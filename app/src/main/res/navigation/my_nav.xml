@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/tvListFragment">
+    <fragment
+        android:id="@+id/tvListFragment"
+        android:name="com.naeemaziz.streamingapp.ui.view.TvListFragment"
+        android:label="Video Streaming" >
+        <action
+            android:id="@+id/action_tvListFragment_to_tvExoPlayerFragment"
+            app:destination="@id/tvExoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvExoPlayerFragment"
+        android:name="com.naeemaziz.streamingapp.ui.view.TvExoPlayerFragment"
+        android:label="ExoPlayer" >
+        <action
+            android:id="@+id/action_tvExoPlayerFragment_to_tvListFragment"
+            app:destination="@id/tvListFragment" />
+    </fragment>
+</navigation>
